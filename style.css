@@ -1,0 +1,966 @@
+:root {
+    --GameFigurPrimary: black;
+    --GameFigurSecondary: white;
+    --GFP: black;
+    --GFS: white;
+}
+
+
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+#Main{
+    background-color: #505050;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+#MainGame{
+    width: 1200px;
+    height: 700px;
+    background-color: black;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 30px;
+    border: #6b6b6b solid 10px;
+}
+
+#StartScreen{
+    width: 1200px;
+    height: 700px;
+    background-color: transparent;
+    margin: auto;
+    border-radius: 20px;
+    position: absolute;
+}
+
+#Title{
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: orange;
+    margin-top: 80px;
+}
+
+#StartButton{
+    margin: auto;
+    width: 500px;
+    border: 10px solid orange;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: #292929;
+}
+
+#StartButton:hover{
+    background-color: #6b6b6b;
+    cursor: pointer;
+}
+
+
+
+#StartText{
+    color: orange;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#SettingsButton{
+    margin: auto;
+    width: 500px;
+    border: 10px solid orange;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: #292929;
+}
+
+#SettingsButton:hover{
+    background-color: #6b6b6b;
+    cursor: pointer;
+}
+
+
+
+#SettingsText{
+    color: orange;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#SettingsScreen{
+    width: 1200px;
+    height: 700px;
+    background-color: #313131;
+    margin: auto;
+    border-radius: 20px;
+    position: absolute;
+    display: none;
+}
+
+#SettingsTitle{
+    color: orange;
+    text-align: center;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+#BackHomeSettings{
+    color: orange;
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #292929;
+    border-radius: 5px;
+    border: 5px solid orange;
+    width: 120px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+#BackHomeSettings:hover{
+    cursor: pointer;
+    background-color: #505050;
+}
+
+
+#SaveSettings{
+    color: orange;
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #292929;
+    border-radius: 5px;
+    border: 5px solid orange;
+    width: 120px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 620px;
+    margin-left: 1040px;
+    position: absolute;
+}
+
+#SaveSettings:hover{
+    cursor: pointer;
+    background-color: #505050;
+}
+
+
+
+#TestGameFigur{
+    position: absolute;
+    background-color: var(--GameFigurPrimary);
+    width: 100px;
+    height: 100px;
+    margin-left: 1050px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+#EyeContainer{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#EyeColor{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: var(--GameFigurSecondary);
+    width: 15px;
+    height: 15px;
+    margin: auto;
+}
+
+#MouthColor{
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 76px;
+    height: 12px;
+    background-color: var(--GameFigurSecondary);
+}
+
+
+
+
+
+
+#ColorSelector{
+    border: 5px solid orange;
+    border-radius: 10px;
+    margin: auto;
+    width: 1000px;
+    margin-top: 20px;
+}
+
+.ColorTitle{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.ColorSector{
+    margin: auto;
+    border: 5px solid #292929;
+    border-radius: 10px;
+    width: 950px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ColorFields{
+    margin-top: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.Colors{
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Colors:hover{
+    cursor: pointer;
+    border: 2px solid orange;
+}
+
+#Colors1{
+    background-color: white;
+}
+
+#Colors2{
+    background-color: black;
+}
+
+#Colors3{
+    background-color: red;
+}
+
+#Colors4{
+    background-color: blue;
+}
+
+#Colors5{
+    background-color: green;
+}
+
+#Colors6{
+    background-color: yellow;
+}
+
+#Colors7{
+    background-color: cyan;
+}
+
+#Colors8{
+    background-color: violet;
+}
+
+#Colors9{
+    background-color: darkblue;
+}
+
+#Colors10{
+    background-color: lightgreen;
+}
+
+
+
+#SettingsCon{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#SettingsMusik{
+    margin: auto;
+    border: 5px solid orange;
+    border-radius: 10px;
+    width: 400px;
+}
+
+#SettingsDev{
+    margin: auto;
+    border: 5px solid orange;
+    border-radius: 10px;
+    width: 400px;
+}
+
+
+#SettingsMusikTitle{
+    color: orange;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+#SettingsDevTitle{
+    color: orange;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.SwitchBar1{
+    background-color: #292929;
+    height: 20px;
+    width: 100px;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.SwitchOff{
+    text-align: center;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #383838;
+}
+
+.SwitchBar2{
+    background-color: rgb(212, 138, 0);
+    height: 20px;
+    width: 100px;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: none;
+}
+
+
+.SwitchOn{
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: orange;
+    
+}
+
+
+.SwitchButton{
+    border-radius: 50%;
+    border: 7.5px solid orange;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(212, 138, 0);
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 145px;
+}
+
+.SwitchButton:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#GameTop{
+    width: 1200px;
+    position: absolute;
+}
+
+#Points{
+    color: cyan;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-left: 20px;
+    padding: 5px;
+    
+}
+
+#NextLevel{
+    width: 700px;
+    height: 20px;
+    margin: auto;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid cyan;
+}
+
+#Progbar{
+    background-color: rgba(0, 255, 255, 0.404);
+    width: 0px;
+    height: 20px;
+    border-radius: 18px;
+}
+
+#StartCountDown{
+    color: white;
+    font-size: 250px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    width: 1200px;
+    margin-top: 200px;
+}
+
+
+#GameFigur{
+    width: 50px;
+    height: 50px;
+    background-color: var(--GFP);
+    margin-top: 450px;
+    margin-left: 30px;
+    animation: jump 1.2s infinite;
+    position: absolute;
+    border-radius: 5px;
+}
+
+
+#EyeCon1{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 50px;
+    margin-top: 7.5px;
+}
+
+#Eye1{
+    width: 10px;
+    height: 10px;
+    background-color: var(--GFS);
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: auto;
+}
+
+#Mouth1{
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 35px;
+    height: 7px;
+    background-color: var(--GFS);
+    margin: auto;
+    margin-top: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#GameOverScreen{
+    width: 1200px;
+    height: 700px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.432);
+    display: none;
+}
+
+#GameOverTitle{
+    color: orange;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 200px;
+}
+
+#Restart{
+    color: orange;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 220px;
+    background-color: #292929;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 5px solid orange;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#Restart:hover{
+    background-color: #505050;
+    cursor: pointer;
+}
+
+
+
+
+#PauseScreen{
+    width: 1200px;
+    height: 700px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.432);
+    display: none;
+}
+
+#PauseTitle{
+    color: orange;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 200px;
+}
+
+#Haupt{
+    color: orange;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 220px;
+    background-color: #292929;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 5px solid orange;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#Haupt:hover{
+    background-color: #505050;
+    cursor: pointer;
+}
+
+#Resume{
+    color: orange;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 220px;
+    background-color: #292929;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 5px solid orange;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#Resume:hover{
+    background-color: #505050;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* Map Builder*/
+
+
+
+
+
+#GameScreen{
+    width: 1200px;
+    height: 700px;
+    background-color: red;
+    margin: auto;
+    border-radius: 20px;
+    position: absolute;
+    display: none;
+    overflow: hidden;
+}
+
+#Map1{
+    width: 32000px;
+    height: 700px;
+    position: absolute;
+    background-color: blue;
+}
+
+
+#DefaultTestFloor{
+    width: 32000px;
+    height: 20px;
+    background-color: purple;
+    
+    position: absolute;
+    
+}
+
+.Floor{
+    background-color: purple;
+}
+
+.Obstacle{
+    background-color: red;
+}
+
+#Obstacle0{
+    width: 50px;
+    height: 50px;
+    
+    margin-top: 450px;
+    margin-left: 500px;
+    
+}
+
+
+#Obstacle1{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 950px;
+    
+}
+
+#Obstacle2{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 1200px;
+     
+}
+
+#Obstacle3{
+    width: 100px;
+    height: 100px;
+    
+    margin-top: -100px;
+    margin-left: 1400px;
+}
+
+#Obstacle4{
+    width: 100px;
+    height: 150px;
+    
+    margin-top: -150px;
+    margin-left: 1650px;
+}
+
+#Obstacle5{
+    width: 200px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 1750px;
+}
+
+#Obstacle6{
+    width: 200px;
+    height: 100px;
+    
+    margin-top: -100px;
+    margin-left: 2000px;
+}
+
+#Obstacle7{
+    width: 100px;
+    height: 150px;
+    
+    margin-top: -150px;
+    margin-left: 2300px;
+}
+
+
+#Obstacle8{
+    width: 150px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 2400px;
+}
+
+#Obstacle9{
+    width: 100px;
+    height: 200px;
+    
+    margin-top: -200px;
+    margin-left: 2550px;
+}
+
+#Obstacle10{
+    width: 100px;
+    height: 250px;
+    
+    margin-top: -250px;
+    margin-left: 2750px;
+}
+
+#Obstacle11{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 3050px;
+}
+
+#Obstacle12{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 3150px;
+}
+
+#Obstacle13{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 3250px;
+}
+
+#Obstacle14{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 3350px;
+}
+
+#Obstacle15{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 3450px;
+}
+
+#Obstacle16{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 3550px;
+}
+
+#Obstacle17{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 3650px;
+}
+
+#Obstacle18{
+    width: 100px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 3750px;
+}
+
+#Obstacle19{
+    width: 300px;
+    height: 150px;
+    
+    margin-top: -150px;
+    margin-left: 3950px;
+}
+
+#Obstacle20{
+    width: 150px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 4250px;
+}
+
+#Obstacle21{
+    width: 300px;
+    height: 150px;
+    
+    margin-top: -150px;
+    margin-left: 4400px;
+}
+
+#Obstacle22{
+    width: 150px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 4700px;
+}
+
+#Obstacle23{
+    width: 300px;
+    height: 150px;
+    
+    margin-top: -150px;
+    margin-left: 4850px;
+}
+
+#Obstacle24{
+    width: 150px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 5150px;
+}
+
+#Obstacle25{
+    width: 300px;
+    height: 200px;
+    
+    margin-top: -200px;
+    margin-left: 5300px;
+}
+
+#Obstacle26{
+    width: 300px;
+    height: 150px;
+    
+    margin-top: -150px;
+    margin-left: 5600px;
+}
+
+#Obstacle27{
+    width: 300px;
+    height: 100px;
+    
+    margin-top: -100px;
+    margin-left: 5900px;
+}
+
+#Obstacle28{
+    width: 300px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 6200px;
+}
+
+#Obstacle29{
+    width: 300px;
+    height: 100px;
+    
+    margin-top: -100px;
+    margin-left: 6500px;
+}
+
+#Obstacle30{
+    width: 300px;
+    height: 50px;
+    
+    margin-top: -50px;
+    margin-left: 6800px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

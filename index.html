@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Jump and Run</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="Main">
+       <div id="MainGame">
+            <div id="StartScreen">
+                <div id="Title">Jump and Run</div>
+                <div id="StartButton" onclick="OpenGame()">
+                    <div id="StartText">Start</div>
+                </div>
+                <div id="SettingsButton" onclick="OpenSettings()">
+                    <div id="SettingsText">Settings</div>
+                </div>
+            </div>
+
+            <div id="SettingsScreen">
+                <div id="BackHomeSettings" onclick="PauseHome()">Back</div>
+
+                <div id="SaveSettings" onclick="SaveSettings()">Save</div>
+
+                <div id="TestGameFigur">
+                    <div id="EyeContainer">
+                        <div id="EyeColor"></div>
+                        <div id="EyeColor"></div>
+                    </div>
+
+                    <div id="MouthColor"></div>
+                </div>
+
+                <div id="SettingsTitle">Settings:</div>
+
+                <div id="ColorSelector">
+                    <div class="ColorSector">
+                        <div class="ColorTitle">Primary Color:</div>
+                        <div class="ColorFields">
+                            <div id="Colors1" class="Colors" onclick="ChangeColorPrimary('white')"></div>
+                            <div id="Colors2" class="Colors" onclick="ChangeColorPrimary('black')"></div>
+                            <div id="Colors3" class="Colors" onclick="ChangeColorPrimary('red')"></div>
+                            <div id="Colors4" class="Colors" onclick="ChangeColorPrimary('blue')"></div>
+                            <div id="Colors5" class="Colors" onclick="ChangeColorPrimary('green')"></div>
+                            <div id="Colors6" class="Colors" onclick="ChangeColorPrimary('yellow')"></div>
+                            <div id="Colors7" class="Colors" onclick="ChangeColorPrimary('cyan')"></div>
+                            <div id="Colors8" class="Colors" onclick="ChangeColorPrimary('violet')"></div>
+                            <div id="Colors9" class="Colors" onclick="ChangeColorPrimary('darkblue')"></div>
+                            <div id="Colors10" class="Colors" onclick="ChangeColorPrimary('lightgreen')"></div>
+                        </div>
+                    </div>
+
+                    <div class="ColorSector">
+                        <div class="ColorTitle">Secondary Color:</div>
+                        <div class="ColorFields">
+                            <div id="Colors1" class="Colors"  onclick="ChangeColorSecondary('white')"></div>
+                            <div id="Colors2" class="Colors" onclick="ChangeColorSecondary('black')"></div>
+                            <div id="Colors3" class="Colors" onclick="ChangeColorSecondary('red')"></div>
+                            <div id="Colors4" class="Colors" onclick="ChangeColorSecondary('blue')"></div>
+                            <div id="Colors5" class="Colors" onclick="ChangeColorSecondary('green')"></div>
+                            <div id="Colors6" class="Colors" onclick="ChangeColorSecondary('yellow')"></div>
+                            <div id="Colors7" class="Colors" onclick="ChangeColorSecondary('cyan')"></div>
+                            <div id="Colors8" class="Colors" onclick="ChangeColorSecondary('violet')"></div>
+                            <div id="Colors9" class="Colors" onclick="ChangeColorSecondary('darkblue')"></div>
+                            <div id="Colors10" class="Colors" onclick="ChangeColorSecondary('lightgreen')"></div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+                <div id="SettingsCon">
+                    <div id="SettingsMusik">
+                        <div id="SettingsMusikTitle">Sound:</div>
+
+                        <div id="ProgbarSound">
+                            <div id="SwitchBar1Sound" class="SwitchBar1">
+                                <div id="SwitchOffSound" class="SwitchOff">OFF</div>
+                            </div>
+                            <div id="SwitchBar2Sound" class="SwitchBar2">
+                                <div id="SwitchOnSound" class="SwitchOn">ON</div>
+                            </div>
+                            <div id="SwitchButtonSound" class="SwitchButton" onclick="ChangeSwitchSound()"></div>
+                        </div>
+
+
+                    </div>
+
+                    <div id="SettingsDev">
+                        <div id="SettingsDevTitle">Dev-Mode:</div>
+                        <div id="DevMode">
+                            <div id="SwitchBar1Dev" class="SwitchBar1">
+                                <div class="SwitchOff">OFF</div>
+                            </div>
+                            <div id="SwitchBar2Dev"class="SwitchBar2">
+                                <div class="SwitchOn">ON</div>
+                            </div>
+                            <div id="SwitchButtonDev" class="SwitchButton" onclick="ChangeSwitchDev()"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="GameScreen">
+                <audio id="audiofile" preload="auto">    
+                    <source src="Jump Audio.mp3" >
+                    <source src="Jump Audio.ogg" >
+                    <source src="Jump Audio.wav" >
+                </audio>
+                <div id="Map1">
+                    <div id="Obstacle0" class="Obstacle"></div>
+                    <div id="Obstacle1" class="Floor"></div>
+                    <div id="Obstacle2" class="Floor"></div>
+                    <div id="Obstacle3" class="Floor"></div>
+                    <div id="Obstacle4" class="Floor"></div>
+
+                    <div id="Obstacle5" class="Obstacle"></div>
+                    <div id="Obstacle6" class="Floor"></div>
+                    <div id="Obstacle7" class="Floor"></div>
+                    <div id="Obstacle8" class="Obstacle"></div>
+                    <div id="Obstacle9" class="Floor"></div>
+                    <div id="Obstacle10" class="Floor"></div>
+
+                    <div id="Obstacle11" class="Floor"></div>
+                    <div id="Obstacle12" class="Floor"></div>
+                    <div id="Obstacle13" class="Floor"></div> 
+                    <div id="Obstacle14" class="Floor"></div>
+                    <div id="Obstacle15" class="Floor"></div>
+
+                    <div id="Obstacle16" class="Floor"></div>
+                    <div id="Obstacle17" class="Floor"></div>
+                    <div id="Obstacle18" class="Floor"></div>
+                    <div id="Obstacle19" class="Floor"></div>
+                    <div id="Obstacle20" class="Floor"></div>
+                    
+                    
+                    
+
+                    <div id="DefaultTestFloor"></div>
+                </div>
+                <div id="GameTop">
+                    <div id="NextLevel">
+                        <div id="Progbar"></div>
+                    </div>
+                    <div id="Points">0</div>
+                    
+                </div>
+
+                
+
+
+                <div id="StartCountDown"></div>
+
+
+                <div id="GameFigur">
+                    <div id="EyeCon1">
+                        <div id="Eye1"></div>
+                        <div id="Eye1"></div>
+                    </div>
+
+                    <div id="Mouth1"></div>
+                </div>
+                
+
+                <div id="GameOverScreen">
+                    <div id="GameOverTitle">Game Over</div>
+                    <div id="Restart" onclick="Restart()">
+                        Try Again
+                    </div>
+                </div>
+
+                <div id="PauseScreen">
+                    <div id="PauseTitle">Break</div>
+                    <div id="Haupt" onclick="PauseHome()">Hauptmenu</div>
+                    <div id="Resume" onclick="PauseStop()">Resume</div>
+                </div>
+            </div>
+
+
+       </div>
+    </div>
+
+</body>
